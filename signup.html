@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Studio Account — LUMORA STUDIO</title>
+  <meta name="description" content="Register your Lumora Studio profile to save custom lighting setups, export technical blueprints, and receive curated equipment firmware updates.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Header / Nav -->
+  <header class="site-header" style="position: static; background: transparent; border-bottom: 1px solid var(--border-subtle);">
+    <div class="container navbar-container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></svg></span>
+        <span>LUMORA<span style="color: var(--accent); font-weight: 300;">STUDIO</span></span>
+      </a>
+      <div>
+        <a href="index.html" class="btn btn-ghost btn-sm">← Return to Website</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Auth Container -->
+  <main class="section" style="flex-grow: 1; display: flex; align-items: center; justify-content: center; padding-block: var(--space-12);">
+    <div class="container container-narrow" style="max-width: 480px;">
+      
+      <div class="card auth-card" style="padding: var(--space-8); display: flex; flex-direction: column; gap: var(--space-5);">
+        <div style="text-align: center;">
+          <span class="eyebrow" style="justify-content: center;">Creator Registration</span>
+          <h1 style="font-size: 1.75rem; margin-top: 6px; margin-bottom: 6px;">Create Studio Account</h1>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">
+            Join the professional studio lighting network for creators and gaffers.
+          </p>
+        </div>
+
+        <form id="signup-form">
+          <div class="form-group">
+            <label class="form-label" for="signup-name">Full Name</label>
+            <input type="text" class="form-input" id="signup-name" placeholder="Marcus Chen" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signup-email">Work Email</label>
+            <input type="email" class="form-input" id="signup-email" placeholder="marcus@cinema-optics.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signup-discipline">Primary Discipline</label>
+            <select class="form-select" id="signup-discipline">
+              <option value="Commercial Cinematography">Commercial Cinematography / DP</option>
+              <option value="Editorial Portrait Photography">Editorial Portrait Photography</option>
+              <option value="Studio Gaffer & Lighting Tech">Studio Gaffer & Lighting Technician</option>
+              <option value="High-End E-Commerce & Product">High-End E-Commerce & Product</option>
+              <option value="YouTube & Content Creator">YouTube & Content Creator</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signup-password">Password</label>
+            <input type="password" class="form-input" id="signup-password" placeholder="Min. 8 characters" minlength="8" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="signup-confirm">Confirm Password</label>
+            <input type="password" class="form-input" id="signup-confirm" placeholder="Repeat password" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: var(--space-2);">
+            Create Account & Access Studio →
+          </button>
+        </form>
+
+        <div style="text-align: center; font-size: 0.88rem; color: var(--text-secondary); border-top: 1px solid var(--border-subtle); padding-top: var(--space-4);">
+          Already have an account? <a href="login.html" style="color: var(--accent); font-weight: 600;">Sign in here</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/bookmarks.js"></script>
+  <script src="assets/js/compare.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('signup-form');
+      form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('signup-name').value.trim();
+        const email = document.getElementById('signup-email').value.trim();
+        const pass = document.getElementById('signup-password').value;
+        const confirm = document.getElementById('signup-confirm').value;
+        const discipline = document.getElementById('signup-discipline').value;
+
+        if (pass !== confirm) {
+          window.LumoraBookmarks?.showToast('Passwords do not match', 'info');
+          return;
+        }
+
+        window.LumoraAuth?.signup(name, email, pass, discipline);
+        setTimeout(() => {
+          window.location.href = 'saved.html';
+        }, 600);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In to Studio Account — LUMORA STUDIO</title>
+  <meta name="description" content="Sign in to your Lumora Studio account to synchronize custom lighting blueprints, saved gear shortlists, and educational bookmarks.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Header / Nav -->
+  <header class="site-header" style="position: static; background: transparent; border-bottom: 1px solid var(--border-subtle);">
+    <div class="container navbar-container">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></svg></span>
+        <span>LUMORA<span style="color: var(--accent); font-weight: 300;">STUDIO</span></span>
+      </a>
+      <div>
+        <a href="index.html" class="btn btn-ghost btn-sm">← Return to Website</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Auth Container -->
+  <main class="section" style="flex-grow: 1; display: flex; align-items: center; justify-content: center; padding-block: var(--space-12);">
+    <div class="container container-narrow" style="max-width: 440px;">
+      
+      <div class="card auth-card" style="padding: var(--space-8); display: flex; flex-direction: column; gap: var(--space-5);">
+        <div style="text-align: center;">
+          <span class="eyebrow" style="justify-content: center;">Studio Portal</span>
+          <h1 style="font-size: 1.75rem; margin-top: 6px; margin-bottom: 6px;">Welcome Back</h1>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">
+            Access your saved equipment collections and lighting blueprints.
+          </p>
+        </div>
+
+        <!-- Demo Autofill Helper -->
+        <div style="background: var(--bg-tertiary); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px dashed var(--border-medium); font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <span style="color: var(--accent); font-weight: 600;">Demo Credentials</span><br>
+            <span style="color: var(--text-muted);">director@lumora.studio</span>
+          </div>
+          <button type="button" class="btn btn-outline btn-sm" id="autofill-demo-btn" style="padding: 4px 8px; font-size: 0.75rem;">
+            Auto-fill
+          </button>
+        </div>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email Address</label>
+            <input type="email" class="form-input" id="login-email" placeholder="director@lumora.studio" required>
+          </div>
+
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <label class="form-label" for="login-password">Password</label>
+              <a href="forgot-password.html" style="font-size: 0.78rem; color: var(--accent);">Forgot password?</a>
+            </div>
+            <input type="password" class="form-input" id="login-password" placeholder="••••••••" required>
+          </div>
+
+          <div class="form-group" style="margin-top: -4px;">
+            <label class="form-checkbox">
+              <input type="checkbox" id="login-remember" checked>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">Keep me signed in on this workstation</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: var(--space-2);">
+            Sign In to Studio →
+          </button>
+        </form>
+
+        <div style="text-align: center; font-size: 0.88rem; color: var(--text-secondary); border-top: 1px solid var(--border-subtle); padding-top: var(--space-4);">
+          Don't have an account? <a href="signup.html" style="color: var(--accent); font-weight: 600;">Create one here</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/bookmarks.js"></script>
+  <script src="assets/js/compare.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('login-form');
+      const emailInput = document.getElementById('login-email');
+      const passInput = document.getElementById('login-password');
+      const autoBtn = document.getElementById('autofill-demo-btn');
+
+      autoBtn?.addEventListener('click', () => {
+        if (emailInput) emailInput.value = 'director@lumora.studio';
+        if (passInput) passInput.value = 'creator123';
+      });
+
+      form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+        const pass = passInput.value.trim();
+        if (email && pass) {
+          window.LumoraAuth?.login(email, pass);
+          setTimeout(() => {
+            window.location.href = 'saved.html';
+          }, 600);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

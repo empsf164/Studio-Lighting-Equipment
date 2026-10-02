@@ -1,0 +1,210 @@
+/* ==========================================================================
+   LUMORA STUDIO — RESPONSIVE STYLES & BREAKPOINTS
+   Mobile First & Rigorous Breakpoint Testing (320px to 2560px+)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tablet & Mobile: Below 1024px (Large Tablet / Small Laptop)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none; /* Offloaded to mobile drawer */
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablet: Below 768px
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --space-20: 3.5rem;
+    --space-16: 2.75rem;
+    --space-12: 2rem;
+  }
+
+  .navbar-container {
+    height: 64px;
+  }
+
+  .search-kbd {
+    display: none;
+  }
+
+  .search-trigger-btn span {
+    display: none;
+  }
+
+  .search-trigger-btn {
+    padding: 0.5rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header-split {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  /* Comparison Tray on Mobile */
+  .comparison-tray {
+    width: calc(100vw - var(--space-6));
+    bottom: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tray-items-container {
+    justify-content: center;
+  }
+
+  .tray-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+  }
+
+  .tray-actions .btn {
+    flex: 1;
+  }
+
+  /* Setup Builder on Mobile */
+  .setup-builder-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Equipment Discovery Layout on Mobile */
+  .equipment-layout-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .filter-sidebar {
+    display: none; /* Opened via mobile filter button */
+  }
+
+  .filter-sidebar.mobile-open {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 2500;
+    background-color: var(--bg-primary);
+    padding: var(--space-6);
+    overflow-y: auto;
+  }
+
+  .mobile-filter-trigger {
+    display: flex !important;
+  }
+
+  /* Comparison Page Table Mobile Scroll */
+  .compare-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-6);
+  }
+
+  .compare-table {
+    min-width: 680px;
+  }
+
+  /* Product Details Layout */
+  .product-details-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-8) !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile: 320px to 425px
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .container, .container-narrow {
+    padding-inline: var(--space-4);
+  }
+
+  .btn {
+    padding: 0.7rem 1.1rem;
+    font-size: 0.875rem;
+  }
+
+  .btn-lg {
+    padding: 0.85rem 1.35rem;
+    font-size: 0.95rem;
+  }
+
+  .brand-logo span {
+    font-size: 1.1rem;
+  }
+
+  .simulator-viewport {
+    height: 220px;
+  }
+
+  .product-specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-card {
+    padding: var(--space-6) var(--space-4) !important;
+  }
+
+  .tabs-nav {
+    justify-content: flex-start;
+  }
+
+  .tab-btn {
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.85rem;
+  }
+}

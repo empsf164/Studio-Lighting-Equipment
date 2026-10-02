@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Lumora Studio — Optical Standards & Color Science Philosophy</title>
+  <meta name="description" content="Discover our mission to engineer precision studio lighting systems with benchmark CRI/TLCI fidelity, modular Bowens optics, and rugged craftsmanship.">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       MANDATORY NAVBAR
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container navbar-container">
+      <a href="index.html" class="brand-logo" aria-label="LUMORA STUDIO Home">
+        <span class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></svg>
+        </span>
+        <span>LUMORA<span style="color: var(--accent); font-weight: 300;">STUDIO</span></span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="equipment.html" class="nav-link">Equipment</a></div>
+        <div class="nav-item"><a href="setup-builder.html" class="nav-link">Lighting Setups</a></div>
+        <div class="nav-item">
+          <a href="compare.html" class="nav-link">Compare <span class="nav-badge-count compare-count-badge" style="display: none;">0</span></a>
+        </div>
+        <div class="nav-item"><a href="guides.html" class="nav-link">Guides</a></div>
+        <div class="nav-item">
+          <a href="saved.html" class="nav-link">Saved <span class="nav-badge-count saved-count-badge" style="display: none;">0</span></a>
+        </div>
+        <div class="nav-item"><a href="about.html" class="nav-link active">About</a></div>
+      </nav>
+
+      <div class="navbar-actions">
+        <button type="button" class="search-trigger-btn" aria-label="Search studio equipment">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>Search</span>
+          <kbd class="search-kbd">⌘K</kbd>
+        </button>
+
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></svg>
+        </button>
+
+        <div class="user-nav-auth">
+          <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
+          <a href="signup.html" class="btn btn-outline btn-sm">Sign Up</a>
+        </div>
+
+        <a href="setup-builder.html" class="btn btn-primary btn-sm">Build a Setup</a>
+
+        <button type="button" class="mobile-nav-toggle" aria-label="Open mobile navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <span class="brand-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></svg></span>
+        <span>LUMORA STUDIO</span>
+      </div>
+      <button type="button" class="btn-icon" id="mobile-drawer-close" aria-label="Close menu">✕</button>
+    </div>
+    <div class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="equipment.html" class="mobile-nav-link">Equipment Catalog</a>
+      <a href="setup-builder.html" class="mobile-nav-link">Lighting Setups</a>
+      <a href="compare.html" class="mobile-nav-link">Compare</a>
+      <a href="guides.html" class="mobile-nav-link">Guides</a>
+      <a href="saved.html" class="mobile-nav-link">Saved Collection</a>
+      <a href="about.html" class="mobile-nav-link active">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+    <div class="mobile-drawer-footer" id="mobile-drawer-auth">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+        <a href="login.html" class="btn btn-secondary btn-sm" style="text-align: center;">Login</a>
+        <a href="signup.html" class="btn btn-primary btn-sm" style="text-align: center;">Sign Up</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       ABOUT PAGE CONTENT
+       ========================================================================== -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section class="section" style="padding-top: var(--space-16);">
+      <div class="container container-narrow text-center">
+        <span class="eyebrow">Our Philosophy & Heritage</span>
+        <h1 style="margin-top: 8px; margin-bottom: var(--space-4);">
+          SHAPE LIGHT. CREATE WITH PRECISION.
+        </h1>
+        <p class="lead">
+          Lumora Studio was founded by cinematographers, optical engineers, and studio gaffers who believe that professional lighting is an exact science as much as an art form.
+        </p>
+      </div>
+    </section>
+
+    <!-- 4 Core Pillars Grid -->
+    <section class="section bg-subtle" style="border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">Engineering Tenets</span>
+          <h2>The Four Quality Pillars</h2>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card card-tech" style="padding: var(--space-6);">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--bg-tertiary); display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: var(--space-4);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 14.14 14.14"/></svg>
+            </div>
+            <h4 style="margin-bottom: 8px;">Spectral Purity</h4>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+              Guaranteeing 98+ CRI and continuous R9 saturated red rendition so human skin tones look rich and organic directly in-camera.
+            </p>
+          </div>
+
+          <div class="card card-tech" style="padding: var(--space-6);">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--bg-tertiary); display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: var(--space-4);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <h4 style="margin-bottom: 8px;">Optical Modularity</h4>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+              Universal Bowens S-mount integration ensuring rapid swapping of parabolic softboxes, Fresnel condensers, and optical snoots.
+            </p>
+          </div>
+
+          <div class="card card-tech" style="padding: var(--space-6);">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--bg-tertiary); display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: var(--space-4);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h4 style="margin-bottom: 8px;">Silent Thermal Control</h4>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+              Vapor-chamber cooling profiles operating under 26dB so that sound recordists capture pristine dialogue on quiet interview sets.
+            </p>
+          </div>
+
+          <div class="card card-tech" style="padding: var(--space-6);">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--bg-tertiary); display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: var(--space-4);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h4 style="margin-bottom: 8px;">Studio Reliability</h4>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+              Aviation-grade aluminum unibody housings built to endure demanding commercial production sets, trucks, and location shoots.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lab Testing Showcase -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: var(--space-12);">
+          <div>
+            <span class="eyebrow">Spectrophotometric Validation</span>
+            <h2 style="margin-top: 8px; margin-bottom: var(--space-4);">Rigorous Lab Calibration</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px;">
+              Every batch of LED chips is sampled inside our dark-chamber integrating sphere to verify chromaticity coordinates (duv < 0.002) and color stability across the entire 0.1% to 100% dimming spectrum.
+            </p>
+            <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 24px;">
+              We refuse to cut corners on passive heatsinks or optical glass. The result is lighting you can trust on multimillion-dollar productions with zero green/magenta shift.
+            </p>
+            <a href="contact.html" class="btn btn-primary">Book a Technical Consultation →</a>
+          </div>
+          <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-medium);">
+            <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80" alt="Lumora Studio Lighting Test Rig" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="footer-logo-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></svg></span>
+            <span>LUMORA STUDIO</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-secondary);">
+            Specialist platform for discovering, comparing, learning about, and planning professional studio lighting equipment.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Studio Equipment</h4>
+          <div class="footer-links">
+            <a href="equipment.html?category=cob">COB Monolights</a>
+            <a href="equipment.html?category=led">LED Panels</a>
+            <a href="equipment.html?category=strobe">Studio Strobes</a>
+            <a href="equipment.html?category=softboxes">Softboxes</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Workflows</h4>
+          <div class="footer-links">
+            <a href="setup-builder.html">Setup Builder</a>
+            <a href="compare.html">Compare Matrix</a>
+            <a href="saved.html">Saved Shortlist</a>
+            <a href="guides.html">Lighting Guides</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <div class="footer-links">
+            <a href="about.html">About Lumora</a>
+            <a href="contact.html">Studio Consultation</a>
+            <a href="login.html">Sign In</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 LUMORA STUDIO. Shape Light. Create With Precision.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/bookmarks.js"></script>
+  <script src="assets/js/compare.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
