@@ -101,9 +101,19 @@
 
   // Floating Tray rendering
   function renderFloatingTray() {
-    // Don't show tray if we are already on compare.html or if 0 items
+    // Don't show tray on compare.html, login.html, signup.html, forgot-password.html
     const isComparePage = window.location.pathname.includes('compare.html');
+    const isAuthPage = window.location.pathname.includes('login.html') || 
+                       window.location.pathname.includes('signup.html') || 
+                       window.location.pathname.includes('forgot-password.html');
+    
     let tray = document.getElementById('lumora-comparison-tray');
+    
+    if (isAuthPage) {
+      if (tray) tray.remove();
+      return;
+    }
+
     const list = getCompareItems();
 
     if (!tray && !isComparePage) {

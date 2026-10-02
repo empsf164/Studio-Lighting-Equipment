@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Studio Account — LUMORA STUDIO</title>
-  <meta name="description" content="Register your Lumora Studio profile to save custom lighting setups, export technical blueprints, and receive curated equipment firmware updates.">
-  
+  <meta name="description"
+    content="Register your Lumora Studio profile to save custom lighting setups, export technical blueprints, and receive curated equipment firmware updates.">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
   <script src="assets/js/theme.js"></script>
 </head>
-<body style="min-height: 100vh; display: flex; flex-direction: column;">
 
-  <!-- Header / Nav -->
-  <header class="site-header" style="position: static; background: transparent; border-bottom: 1px solid var(--border-subtle);">
-    <div class="container navbar-container">
-      <a href="index.html" class="brand-logo">
-        <span class="brand-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></svg></span>
-        <span>LUMORA<span style="color: var(--accent); font-weight: 300;">STUDIO</span></span>
-      </a>
-      <div>
-        <a href="index.html" class="btn btn-ghost btn-sm">← Return to Website</a>
-      </div>
-    </div>
-  </header>
+<body style="min-height: 100vh; display: flex; flex-direction: column; position: relative;">
+
+  <!-- Fixed Top-Right Theme Toggle -->
+  <div class="auth-top-bar">
+    <button type="button" class="theme-toggle-btn" aria-label="Toggle light/dark theme" title="Toggle Theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/>
+      </svg>
+    </button>
+  </div>
 
   <!-- Main Auth Container -->
-  <main class="section" style="flex-grow: 1; display: flex; align-items: center; justify-content: center; padding-block: var(--space-12);">
+  <main class="section"
+    style="flex-grow: 1; display: flex; align-items: center; justify-content: center; padding-block: var(--space-12);">
     <div class="container container-narrow" style="max-width: 480px;">
-      
-      <div class="card auth-card" style="padding: var(--space-8); display: flex; flex-direction: column; gap: var(--space-5);">
-        <div style="text-align: center;">
+
+      <div class="card auth-card"
+        style="padding: var(--space-8); display: flex; flex-direction: column; gap: var(--space-5);">
+        
+        <!-- Brand Logo inside top center of the box -->
+        <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+          <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-3);" aria-label="LUMORA STUDIO Home">
+            <span class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2"/>
+                <path d="M12 20v2"/>
+                <path d="m4.93 4.93 1.41 1.41"/>
+                <path d="m17.66 17.66 1.41 1.41"/>
+                <path d="M2 12h2"/>
+                <path d="M20 12h2"/>
+              </svg>
+            </span>
+            <span>LUMORA<span style="color: var(--accent); font-weight: 300;">STUDIO</span></span>
+          </a>
           <span class="eyebrow" style="justify-content: center;">Creator Registration</span>
           <h1 style="font-size: 1.75rem; margin-top: 6px; margin-bottom: 6px;">Create Studio Account</h1>
           <p style="font-size: 0.88rem; color: var(--text-secondary);">
@@ -71,10 +89,47 @@
             <input type="password" class="form-input" id="signup-confirm" placeholder="Repeat password" required>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: var(--space-2);">
+          <!-- Terms and Conditions Tickbox -->
+          <div class="form-group" style="margin-top: 4px; margin-bottom: var(--space-4);">
+            <label class="form-checkbox" style="align-items: flex-start; gap: 10px;">
+              <input type="checkbox" id="signup-terms" required style="margin-top: 3px;">
+              <span style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4;">
+                I agree to the <a href="about.html" style="color: var(--accent); text-decoration: underline;">Terms of Service</a> and <a href="about.html" style="color: var(--accent); text-decoration: underline;">Privacy Policy</a>
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
             Create Account & Access Studio →
           </button>
         </form>
+
+        <!-- Social Login Divider -->
+        <div style="display: flex; align-items: center; margin-block: var(--space-2); color: var(--text-muted); font-size: 0.78rem;">
+          <span style="flex: 1; height: 1px; background: var(--border-subtle);"></span>
+          <span style="padding-inline: var(--space-3); text-transform: uppercase; font-weight: 600; letter-spacing: 0.05em;">Or sign up with</span>
+          <span style="flex: 1; height: 1px; background: var(--border-subtle);"></span>
+        </div>
+
+        <!-- Social Icons Google and Apple in bottom -->
+        <div class="auth-social-buttons">
+          <button type="button" class="auth-social-btn" id="google-signup-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            <span>Google</span>
+          </button>
+          
+          <button type="button" class="auth-social-btn" id="apple-signup-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-1.99.6-2.63 1.35-.57.65-1.06 1.72-.93 2.74 1.01.08 2.03-.5 2.64-1.24z"/>
+            </svg>
+            <span>Apple</span>
+          </button>
+        </div>
 
         <div style="text-align: center; font-size: 0.88rem; color: var(--text-secondary); border-top: 1px solid var(--border-subtle); padding-top: var(--space-4);">
           Already have an account? <a href="login.html" style="color: var(--accent); font-weight: 600;">Sign in here</a>
@@ -85,11 +140,7 @@
   </main>
 
   <script src="assets/js/data.js"></script>
-  <script src="assets/js/bookmarks.js"></script>
-  <script src="assets/js/compare.js"></script>
-  <script src="assets/js/search.js"></script>
   <script src="assets/js/auth.js"></script>
-  <script src="assets/js/main.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -101,6 +152,12 @@
         const pass = document.getElementById('signup-password').value;
         const confirm = document.getElementById('signup-confirm').value;
         const discipline = document.getElementById('signup-discipline').value;
+        const terms = document.getElementById('signup-terms')?.checked;
+
+        if (!terms) {
+          window.LumoraBookmarks?.showToast('Please agree to the Terms of Service', 'info');
+          return;
+        }
 
         if (pass !== confirm) {
           window.LumoraBookmarks?.showToast('Passwords do not match', 'info');
@@ -112,7 +169,19 @@
           window.location.href = 'saved.html';
         }, 600);
       });
+
+      // Social mock signups
+      document.getElementById('google-signup-btn')?.addEventListener('click', () => {
+        window.LumoraAuth?.signup('Google Creator', 'google.user@lumora.studio', 'oauth-pass', 'Commercial Cinematography');
+        setTimeout(() => { window.location.href = 'saved.html'; }, 600);
+      });
+
+      document.getElementById('apple-signup-btn')?.addEventListener('click', () => {
+        window.LumoraAuth?.signup('Apple Creator', 'apple.user@lumora.studio', 'oauth-pass', 'Editorial Portrait Photography');
+        setTimeout(() => { window.location.href = 'saved.html'; }, 600);
+      });
     });
   </script>
 </body>
+
 </html>

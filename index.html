@@ -11,6 +11,9 @@
   <meta property="og:description" content="Discover, compare, and build professional studio lighting systems with precision color science and Bowens modularity.">
   <meta property="og:type" content="website">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/components.css">
@@ -125,54 +128,50 @@
           <a href="setup-builder.html" class="nav-link">Lighting Setups</a>
         </div>
         <div class="nav-item">
-          <a href="compare.html" class="nav-link">
-            Compare
-            <span class="nav-badge-count compare-count-badge" style="display: none;">0</span>
-          </a>
-        </div>
-        <div class="nav-item">
           <a href="guides.html" class="nav-link">Guides</a>
         </div>
         <div class="nav-item">
-          <a href="saved.html" class="nav-link">
-            Saved
-            <span class="nav-badge-count saved-count-badge" style="display: none;">0</span>
-          </a>
+          <a href="about.html" class="nav-link">About</a>
         </div>
         <div class="nav-item">
-          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
         </div>
       </nav>
 
       <!-- Right Navbar Actions -->
       <div class="navbar-actions">
         
-        <!-- Search Trigger -->
-        <button type="button" class="search-trigger-btn" aria-label="Search studio equipment">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <span>Search</span>
-          <kbd class="search-kbd">⌘K</kbd>
-        </button>
+        <!-- Compare Icon Button -->
+        <a href="compare.html" class="nav-icon-btn" aria-label="Compare Equipment" title="Compare Equipment">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 3h5v5"/><path d="M8 21H3v-5"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/>
+          </svg>
+          <span class="nav-badge-count compare-count-badge" style="display: none;">0</span>
+        </a>
+
+        <!-- Saved Icon Button -->
+        <a href="saved.html" class="nav-icon-btn" aria-label="Saved Equipment & Blueprints" title="Saved Collection">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/>
+          </svg>
+          <span class="nav-badge-count saved-count-badge" style="display: none;">0</span>
+        </a>
 
         <!-- Theme Switcher -->
-        <button type="button" class="theme-toggle-btn" aria-label="Toggle light/dark theme">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/></svg>
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle light/dark theme" title="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/>
+          </svg>
         </button>
 
-        <!-- Auth State Container -->
-        <div class="user-nav-auth">
-          <a href="login.html" class="btn btn-ghost btn-sm">Login</a>
-          <a href="signup.html" class="btn btn-outline btn-sm">Sign Up</a>
-        </div>
-
-        <!-- Primary CTA -->
-        <a href="setup-builder.html" class="btn btn-primary btn-sm" style="display: inline-flex;">
-          Build a Setup
-        </a>
+        <!-- Sign Up Button -->
+        <a href="signup.html" class="btn btn-primary btn-sm nav-signup-btn">Sign Up</a>
 
         <!-- Mobile Hamburger Toggle -->
         <button type="button" class="mobile-nav-toggle" aria-label="Open mobile navigation menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
         </button>
       </div>
     </div>
@@ -184,13 +183,16 @@
     <div class="mobile-drawer-header">
       <div class="brand-logo">
         <span class="brand-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/>
+          </svg>
         </span>
-        <span>LUMORA STUDIO</span>
+        <span>LUMORA<span style="color: var(--accent); font-weight: 300;">STUDIO</span></span>
       </div>
       <button type="button" class="btn-icon" id="mobile-drawer-close" aria-label="Close menu">✕</button>
     </div>
 
+    <!-- Same Menus as Navbar -->
     <div class="mobile-drawer-links">
       <a href="index.html" class="mobile-nav-link active">Home</a>
       
@@ -210,24 +212,33 @@
       </div>
 
       <a href="setup-builder.html" class="mobile-nav-link">Lighting Setups</a>
-      <a href="compare.html" class="mobile-nav-link">
-        <span>Compare</span>
-        <span class="badge badge-accent compare-count-badge" style="display: none;">0</span>
-      </a>
       <a href="guides.html" class="mobile-nav-link">Guides</a>
-      <a href="saved.html" class="mobile-nav-link">
-        <span>Saved Collection</span>
-        <span class="badge badge-accent saved-count-badge" style="display: none;">0</span>
-      </a>
-      <a href="about.html" class="mobile-nav-link">About Lumora</a>
-      <a href="contact.html" class="mobile-nav-link">Contact & Support</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
     </div>
 
-    <div class="mobile-drawer-footer" id="mobile-drawer-auth">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-        <a href="login.html" class="btn btn-secondary btn-sm" style="text-align: center;">Login</a>
-        <a href="signup.html" class="btn btn-primary btn-sm" style="text-align: center;">Sign Up</a>
+    <!-- Same Buttons Moved into Mobile Drawer -->
+    <div class="mobile-drawer-footer">
+      <div class="mobile-drawer-icon-row">
+        <a href="compare.html" class="nav-icon-btn" aria-label="Compare Equipment" title="Compare Equipment">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 3h5v5"/><path d="M8 21H3v-5"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/>
+          </svg>
+          <span class="nav-badge-count compare-count-badge" style="display: none;">0</span>
+        </a>
+        <a href="saved.html" class="nav-icon-btn" aria-label="Saved Equipment & Blueprints" title="Saved Collection">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/>
+          </svg>
+          <span class="nav-badge-count saved-count-badge" style="display: none;">0</span>
+        </a>
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle light/dark theme" title="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/>
+          </svg>
+        </button>
       </div>
+      <a href="signup.html" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">Sign Up</a>
     </div>
   </aside>
 
@@ -593,13 +604,21 @@
         
         <!-- Brand Info -->
         <div class="footer-brand">
-          <div class="footer-logo">
-            <span class="footer-logo-mark">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M2 12h2"/><path d="M20 12h2"/></svg>
+          <a href="index.html" class="brand-logo" aria-label="LUMORA STUDIO Home">
+            <span class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2"/>
+                <path d="M12 20v2"/>
+                <path d="m4.93 4.93 1.41 1.41"/>
+                <path d="m17.66 17.66 1.41 1.41"/>
+                <path d="M2 12h2"/>
+                <path d="M20 12h2"/>
+              </svg>
             </span>
-            <span>LUMORA STUDIO</span>
-          </div>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+            <span>LUMORA<span style="color: var(--accent); font-weight: 300;">STUDIO</span></span>
+          </a>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-top: var(--space-3);">
             Specialist platform for discovering, comparing, learning about, and planning professional studio lighting equipment for photography and video.
           </p>
           <div class="footer-socials">
@@ -639,8 +658,8 @@
           <h4 class="footer-col-title">Company</h4>
           <div class="footer-links">
             <a href="about.html">About Lumora</a>
+            <a href="contact.html">Contact Us</a>
             <a href="contact.html">Studio Consultation</a>
-            <a href="contact.html">Support & Service</a>
             <a href="login.html">Member Sign In</a>
             <a href="signup.html">Create Studio Account</a>
           </div>

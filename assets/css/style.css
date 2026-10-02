@@ -313,13 +313,14 @@ p.lead {
 }
 
 .grid {
+  --grid-gap: var(--space-6);
   display: grid;
-  gap: var(--space-6);
+  gap: var(--grid-gap);
 }
 
-.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); --grid-gap: var(--space-6); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); --grid-gap: var(--space-6); }
+.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); --grid-gap: var(--space-6); }
 
 .flex { display: flex; }
 .flex-col { flex-direction: column; }

@@ -10,7 +10,7 @@ window.LUMORA_DATA = {
   equipment: [
     {
       id: "lumora-x600-cob",
-      name: "Lumora X600 Bi-Color COB Monolight",
+      name: "Lumora X600 Pro Cinema Bi-Color COB Studio Monolight",
       category: "COB Lights",
       type: "cob",
       power: "600W",
@@ -1003,6 +1003,29 @@ window.LUMORA_DATA = {
         <p>Lighting ratio defines the mathematical relationship between the illuminated side of a subject's face and the shaded side. Mastering ratios allows a Director of Photography to maintain consistent visual mood across multi-day shoots.</p>
       `,
       relatedProducts: ["lumora-x600-cob", "lumora-strobe-800", "lumora-rgb-tube-kit"]
+    },
+    {
+      id: "guide-wireless-dmx-crmx-control",
+      title: "Wireless DMX & CRMX Integration: Real-Time Multi-Fixture Stage Control",
+      slug: "wireless-dmx-crmx-control",
+      category: "Studio Setup",
+      readTime: "8 min read",
+      author: "Elena Vance, Lead Studio Gaffer",
+      date: "August 18, 2026",
+      image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80",
+      excerpt: "How to configure LumenRadio TimoTwo CRMX transmitters, Art-Net nodes, and universe routing for seamless tablet and console lighting orchestration.",
+      featured: false,
+      content: `
+        <h2>The Wireless Lighting Revolution</h2>
+        <p>Gone are the days of taping hundreds of meters of 5-pin XLR cables across studio soundstages. Modern commercial stages rely on robust wireless DMX protocols like LumenRadio CRMX (Cognitive Radio Multiplexer) and Bluetooth mesh arrays.</p>
+
+        <h3>1. CRMX vs. Standard 2.4GHz Wi-Fi</h3>
+        <p>Standard consumer 2.4GHz Wi-Fi easily drops packets in high-interference studio environments. CRMX operates with automated cognitive frequency hopping at 1000 frames per second, dynamically avoiding occupied frequency bands to ensure zero flicker or latency.</p>
+
+        <h3>2. Universe Mapping & Address Offsets</h3>
+        <p>When outfitting multi-channel RGBWW fixtures and pixel tubes, each light utilizes between 6 and 48 DMX addresses. Proper universe channel budgeting ensures instantaneous master dimming and strobe effects without signal collision.</p>
+      `,
+      relatedProducts: ["lumora-x600-cob", "lumora-rgb-tube-kit", "lumora-panel-1x1-rgb"]
     }
   ],
 
