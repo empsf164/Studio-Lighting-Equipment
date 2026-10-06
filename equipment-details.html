@@ -28,12 +28,47 @@
 
       <nav class="nav-menu" aria-label="Main Navigation">
         <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
         <div class="nav-item">
-          <a href="equipment.html" class="nav-link active">Equipment</a>
+          <a href="equipment.html" class="nav-link active" id="nav-equipment-trigger" aria-haspopup="true">
+            Equipment
+            <svg class="caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="dropdown-menu" aria-label="Equipment Submenu">
+            <div class="megamenu-grid">
+              <a href="equipment.html?category=cob" class="dropdown-item">
+                <div class="dropdown-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg></div>
+                <div class="dropdown-item-content"><h4>COB Lights</h4><p>Continuous LED monolights 300W–1200W</p></div>
+              </a>
+              <a href="equipment.html?category=led" class="dropdown-item">
+                <div class="dropdown-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
+                <div class="dropdown-item-content"><h4>LED Panels & Mats</h4><p>Flexible mats and 1x1 broadcast panels</p></div>
+              </a>
+              <a href="equipment.html?category=strobe" class="dropdown-item">
+                <div class="dropdown-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                <div class="dropdown-item-content"><h4>Strobes & Flash Heads</h4><p>High-speed sync 1/8000s TTL monolights</p></div>
+              </a>
+              <a href="equipment.html?category=continuous" class="dropdown-item">
+                <div class="dropdown-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/></svg></div>
+                <div class="dropdown-item-content"><h4>Continuous RGB Tubes</h4><p>Pixel-mapped wireless cinema tubes</p></div>
+              </a>
+              <a href="equipment.html?category=softboxes" class="dropdown-item">
+                <div class="dropdown-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg></div>
+                <div class="dropdown-item-content"><h4>Softboxes & Domes</h4><p>Parabolic octas and omni lanterns</p></div>
+              </a>
+              <a href="equipment.html?category=modifier" class="dropdown-item">
+                <div class="dropdown-item-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg></div>
+                <div class="dropdown-item-content"><h4>Light Modifiers & Fresnels</h4><p>Optical spotlight mounts & glass Fresnels</p></div>
+              </a>
+            </div>
+            <div class="dropdown-footer">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Bowens S-Mount Standard Ecosystem</span>
+              <a href="equipment.html" style="font-size: 0.85rem; font-weight: 600; color: var(--accent);">View All Equipment →</a>
+            </div>
+          </div>
         </div>
         <div class="nav-item"><a href="setup-builder.html" class="nav-link">Lighting Setups</a></div>
         <div class="nav-item"><a href="guides.html" class="nav-link">Guides</a></div>
-        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
         <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
       </nav>
 
@@ -93,10 +128,27 @@
     <!-- Same Menus as Navbar -->
     <div class="mobile-drawer-links">
       <a href="index.html" class="mobile-nav-link">Home</a>
-      <a href="equipment.html" class="mobile-nav-link active">Equipment</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      
+      <!-- Mobile Accordion for Equipment -->
+      <div>
+        <a href="equipment.html" class="mobile-nav-link active" id="mobile-equipment-accordion-btn">
+          <span>Equipment</span>
+          <svg class="caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="mobile-accordion-content" id="mobile-equipment-accordion">
+          <a href="equipment.html?category=cob" class="mobile-accordion-link">LED & COB Lights</a>
+          <a href="equipment.html?category=led" class="mobile-accordion-link">LED Panels & Mats</a>
+          <a href="equipment.html?category=strobe" class="mobile-accordion-link">Strobes & Monolights</a>
+          <a href="equipment.html?category=continuous" class="mobile-accordion-link">RGB Continuous Tubes</a>
+          <a href="equipment.html?category=softboxes" class="mobile-accordion-link">Softboxes & Modifiers</a>
+          <a href="equipment.html?category=modifier" class="mobile-accordion-link">Optical Fresnels & Gobos</a>
+          <a href="equipment.html" class="mobile-accordion-link" style="color: var(--accent); font-weight: 600;">All Equipment →</a>
+        </div>
+      </div>
+
       <a href="setup-builder.html" class="mobile-nav-link">Lighting Setups</a>
       <a href="guides.html" class="mobile-nav-link">Guides</a>
-      <a href="about.html" class="mobile-nav-link">About</a>
       <a href="contact.html" class="mobile-nav-link">Contact</a>
     </div>
 
@@ -259,5 +311,12 @@
   <script src="assets/js/auth.js"></script>
   <script src="assets/js/equipment.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <!-- Back to Top Floating Button -->
+  <button type="button" class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
 </body>
 </html>

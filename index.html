@@ -51,6 +51,9 @@
         <div class="nav-item">
           <a href="index.html" class="nav-link active">Home</a>
         </div>
+        <div class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </div>
 
         <!-- Equipment Dropdown Megamenu -->
         <div class="nav-item">
@@ -131,9 +134,6 @@
           <a href="guides.html" class="nav-link">Guides</a>
         </div>
         <div class="nav-item">
-          <a href="about.html" class="nav-link">About</a>
-        </div>
-        <div class="nav-item">
           <a href="contact.html" class="nav-link">Contact</a>
         </div>
       </nav>
@@ -195,6 +195,7 @@
     <!-- Same Menus as Navbar -->
     <div class="mobile-drawer-links">
       <a href="index.html" class="mobile-nav-link active">Home</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
       
       <!-- Mobile Accordion for Equipment -->
       <div>
@@ -204,16 +205,17 @@
         </a>
         <div class="mobile-accordion-content" id="mobile-equipment-accordion">
           <a href="equipment.html?category=cob" class="mobile-accordion-link">LED & COB Lights</a>
+          <a href="equipment.html?category=led" class="mobile-accordion-link">LED Panels & Mats</a>
           <a href="equipment.html?category=strobe" class="mobile-accordion-link">Strobes & Monolights</a>
-          <a href="equipment.html?category=softboxes" class="mobile-accordion-link">Softboxes & Modifiers</a>
           <a href="equipment.html?category=continuous" class="mobile-accordion-link">RGB Continuous Tubes</a>
+          <a href="equipment.html?category=softboxes" class="mobile-accordion-link">Softboxes & Modifiers</a>
+          <a href="equipment.html?category=modifier" class="mobile-accordion-link">Optical Fresnels & Gobos</a>
           <a href="equipment.html" class="mobile-accordion-link" style="color: var(--accent); font-weight: 600;">All Equipment →</a>
         </div>
       </div>
 
       <a href="setup-builder.html" class="mobile-nav-link">Lighting Setups</a>
       <a href="guides.html" class="mobile-nav-link">Guides</a>
-      <a href="about.html" class="mobile-nav-link">About</a>
       <a href="contact.html" class="mobile-nav-link">Contact</a>
     </div>
 
@@ -262,7 +264,7 @@
               </p>
             </div>
 
-            <div style="display: flex; flex-wrap: wrap; gap: var(--space-4);">
+            <div class="hero-actions" style="display: flex; flex-wrap: wrap; gap: var(--space-4);">
               <a href="equipment.html" class="btn btn-primary btn-lg">
                 Explore Equipment →
               </a>
@@ -582,7 +584,7 @@
           <p class="lead" style="max-width: 580px;">
             Configure an optimized multi-light setup tailored directly to your shooting genre, studio dimensions, and desired visual contrast.
           </p>
-          <div style="display: flex; gap: var(--space-4); margin-top: var(--space-3); flex-wrap: wrap; justify-content: center;">
+          <div class="cta-actions" style="display: flex; gap: var(--space-4); margin-top: var(--space-3); flex-wrap: wrap; justify-content: center;">
             <a href="setup-builder.html" class="btn btn-primary btn-lg">
               Start Building Now →
             </a>
@@ -719,8 +721,10 @@
                 </div>
               </div>
               <div class="product-card-footer">
-                <span class="product-price">$${p.price}</span>
-                <div style="display: flex; gap: 6px;">
+                <div class="product-price-wrapper">
+                  <span class="product-price">$${p.price}</span>
+                </div>
+                <div class="product-card-actions-group">
                   <button type="button" class="btn btn-secondary btn-sm ${inCompare ? 'active' : ''}" data-compare-btn data-id="${p.id}">
                     <span class="btn-text">${inCompare ? 'Comparing' : 'Compare'}</span>
                   </button>
@@ -778,5 +782,12 @@
       }
     });
   </script>
+
+  <!-- Back to Top Floating Button -->
+  <button type="button" class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
 </body>
 </html>

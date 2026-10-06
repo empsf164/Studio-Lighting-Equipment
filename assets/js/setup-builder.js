@@ -91,10 +91,10 @@
       const isSaved = window.LumoraBookmarks?.isSaved(setup.id, 'setups');
 
       root.innerHTML = `
-        <div class="setup-builder-grid" style="display: grid; grid-template-columns: 380px 1fr; gap: var(--space-8); align-items: start;">
+        <div class="setup-builder-grid">
           
           <!-- Left: Parameter Selectors -->
-          <div class="card" style="padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-5);">
+          <div class="card setup-configurator-card" style="padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-5);">
             <div style="border-bottom: 1px solid var(--border-subtle); padding-bottom: var(--space-4);">
               <span class="eyebrow">Studio System Configurator</span>
               <h2 style="font-size: 1.35rem; margin-top: 4px;">Define Parameters</h2>
@@ -161,7 +161,7 @@
           </div>
 
           <!-- Right: Dynamic Blueprint & Bill of Materials -->
-          <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+          <div class="setup-main-content-col" style="display: flex; flex-direction: column; gap: var(--space-6); min-width: 0; width: 100%;">
             
             <!-- Setup Header Card -->
             <div class="card card-tech" style="padding: var(--space-6);">
@@ -198,7 +198,7 @@
               <h4 style="font-size: 1rem; font-family: var(--font-heading); color: var(--text-primary); margin-bottom: var(--space-3);">
                 Recommended Gear List & Settings
               </h4>
-              <div class="grid grid-2" style="gap: var(--space-4);">
+              <div class="setup-gear-list-grid" id="setup-gear-list-grid">
                 
                 ${setup.keyLight ? `
                   <div class="card" style="padding: var(--space-4); border-left: 3px solid var(--accent);">

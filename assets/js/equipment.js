@@ -61,10 +61,10 @@
         </div>
 
         <div class="product-card-footer">
-          <div>
+          <div class="product-price-wrapper">
             <span class="product-price">$${product.price}</span>
           </div>
-          <div style="display: flex; gap: 6px;">
+          <div class="product-card-actions-group">
             <button 
               type="button" 
               class="btn btn-secondary btn-sm ${inCompare ? 'active' : ''}" 

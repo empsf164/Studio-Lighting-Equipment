@@ -28,6 +28,7 @@
 
       <nav class="nav-menu" aria-label="Main Navigation">
         <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
         
         <div class="nav-item">
           <a href="equipment.html" class="nav-link active" id="nav-equipment-trigger">
@@ -70,7 +71,6 @@
 
         <div class="nav-item"><a href="setup-builder.html" class="nav-link">Lighting Setups</a></div>
         <div class="nav-item"><a href="guides.html" class="nav-link">Guides</a></div>
-        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
         <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
       </nav>
 
@@ -130,10 +130,27 @@
     <!-- Same Menus as Navbar -->
     <div class="mobile-drawer-links">
       <a href="index.html" class="mobile-nav-link">Home</a>
-      <a href="equipment.html" class="mobile-nav-link active">Equipment</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      
+      <!-- Mobile Accordion for Equipment -->
+      <div>
+        <a href="equipment.html" class="mobile-nav-link active" id="mobile-equipment-accordion-btn">
+          <span>Equipment</span>
+          <svg class="caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="mobile-accordion-content" id="mobile-equipment-accordion">
+          <a href="equipment.html?category=cob" class="mobile-accordion-link">LED & COB Lights</a>
+          <a href="equipment.html?category=led" class="mobile-accordion-link">LED Panels & Mats</a>
+          <a href="equipment.html?category=strobe" class="mobile-accordion-link">Strobes & Monolights</a>
+          <a href="equipment.html?category=continuous" class="mobile-accordion-link">RGB Continuous Tubes</a>
+          <a href="equipment.html?category=softboxes" class="mobile-accordion-link">Softboxes & Modifiers</a>
+          <a href="equipment.html?category=modifier" class="mobile-accordion-link">Optical Fresnels & Gobos</a>
+          <a href="equipment.html" class="mobile-accordion-link" style="color: var(--accent); font-weight: 600;">All Equipment →</a>
+        </div>
+      </div>
+
       <a href="setup-builder.html" class="mobile-nav-link">Lighting Setups</a>
       <a href="guides.html" class="mobile-nav-link">Guides</a>
-      <a href="about.html" class="mobile-nav-link">About</a>
       <a href="contact.html" class="mobile-nav-link">Contact</a>
     </div>
 
@@ -392,5 +409,12 @@
   <script src="assets/js/auth.js"></script>
   <script src="assets/js/equipment.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <!-- Back to Top Floating Button -->
+  <button type="button" class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
 </body>
 </html>

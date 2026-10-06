@@ -376,12 +376,80 @@
   }
 
   // --------------------------------------------------------------------------
-  // 5. GLOBAL INITIALIZATION
+  // 5. BACK TO TOP BUTTON CONTROLLER
+  // --------------------------------------------------------------------------
+  function initBackToTop() {
+    let btn = document.getElementById('back-to-top-btn');
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'back-to-top-btn';
+      btn.id = 'back-to-top-btn';
+      btn.setAttribute('aria-label', 'Back to top');
+      btn.setAttribute('title', 'Back to top');
+      btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>`;
+      document.body.appendChild(btn);
+    }
+
+    const toggleVisibility = () => {
+      if (window.scrollY > 280) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    toggleVisibility();
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 6. PASSWORD VISIBILITY TOGGLE (login.html, signup.html)
+  // --------------------------------------------------------------------------
+  function initPasswordToggles() {
+    const toggleBtns = document.querySelectorAll('.password-toggle-btn');
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const container = btn.closest('.password-input-group') || btn.parentElement;
+        if (!container) return;
+        const input = container.querySelector('input');
+        const showIcon = btn.querySelector('.eye-icon-show');
+        const hideIcon = btn.querySelector('.eye-icon-hide');
+        if (!input) return;
+
+        if (input.type === 'password') {
+          input.type = 'text';
+          if (showIcon) showIcon.style.display = 'none';
+          if (hideIcon) hideIcon.style.display = 'block';
+          btn.setAttribute('aria-label', 'Hide password');
+        } else {
+          input.type = 'password';
+          if (showIcon) showIcon.style.display = 'block';
+          if (hideIcon) hideIcon.style.display = 'none';
+          btn.setAttribute('aria-label', 'Show password');
+        }
+      });
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 7. GLOBAL INITIALIZATION
   // --------------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initHeroSimulator();
     initComparePage();
     initSavedHub();
+    initBackToTop();
+    initPasswordToggles();
   });
 })();
+
