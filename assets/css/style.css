@@ -363,14 +363,20 @@ p.lead {
 
 .btn-primary {
   background-color: var(--accent);
-  color: #0b0f17;
+  color: var(--text-inverse);
   box-shadow: 0 2px 10px var(--amber-glow);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus-visible {
   background-color: var(--accent-hover);
+  color: var(--text-inverse);
   box-shadow: 0 4px 18px var(--amber-glow-strong);
   transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
 }
 
 .btn-secondary {
